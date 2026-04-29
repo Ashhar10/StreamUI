@@ -75,11 +75,13 @@ async function init() {
             // Configure the video element
             const videoElement = appStream.stream.videoElementParent?.querySelector('video');
             if (videoElement) {
+                videoElement.setAttribute('playsinline', '');
+                videoElement.playsInline = true;
                 videoElement.muted = true;
                 videoElement.autoplay = true;
                 videoElement.focus();
                 videoElement.tabIndex = 0;
-                console.log('Video element found and configured!');
+                console.log('Video element found and configured for mobile!');
             }
 
             // Mute the separate audio element
