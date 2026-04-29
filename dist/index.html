@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Premium Configurator | Cloud Stream</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="./assets/index-B2tRce7B.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-D35mlrZn.css">
+</head>
+<body>
+    <!-- StreamPixel SDK mounts its player here -->
+    <div id="root"></div>
+    <div id="infoOverlay" style="display:none;"></div>
+
+    <!-- Video stream gets appended here by our script -->
+    <div id="videoContainer"></div>
+
+    <!-- Top Branding -->
+    <div class="header">
+        <div class="logo">ARCHVIZ PRO</div>
+    </div>
+
+    <!-- Material Configurator Panel -->
+    <div class="configurator-panel" id="uiPanel">
+        <div class="category-label">
+            <span class="title">Surface</span>
+            <span class="count">3 Options</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="options-list">
+            <div class="option-item selected"
+                 style="background: linear-gradient(135deg, #666, #444);"
+                 data-material="/Engine/BasicShapes/BasicShapeMaterial.BasicShapeMaterial"
+                 data-label="Default Grey">
+                <span class="tip">Default Grey</span>
+            </div>
+
+            <div class="option-item"
+                 style="background: linear-gradient(135deg, #ffd700, #b8860b);"
+                 data-material="/Game/Materials/M_Gold.M_Gold"
+                 data-label="Polished Gold">
+                <span class="tip">Polished Gold</span>
+            </div>
+
+            <div class="option-item"
+                 style="background: linear-gradient(135deg, #e8e8e8, #a0a0a0);"
+                 data-material="/Game/Materials/M_Chrome.M_Chrome"
+                 data-label="Brushed Chrome">
+                <span class="tip">Brushed Chrome</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Status Badge -->
+    <div class="status-badge">
+        <div id="statusDot" class="dot"></div>
+        <span id="statusText">CONNECTING</span>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Loading Overlay -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+        <p class="loader-text">ESTABLISHING CONNECTION</p>
+    </div>
+
+</body>
+</html>
